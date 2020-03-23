@@ -1,0 +1,58 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="Design System/Guideline/Modální dialog" /> 
+
+
+# Modální dialog
+
+Modální dialog je vyskakovací prvek, který slouží ke sdělení důležitých informací a nebo pro získání vstupní dat od uživatele. 
+
+## Anatomie prvku
+
+## Kdy a jak používat dialog
+
+- Tam kde je nutné okamžitě získat pozornost uživatele. 
+-  K dokončení krátkých úkolů a sdělení důležitých informací, spjatý s úkolem uživatele. 
+- Používejte střídmě. Dialogy jsou rušivými elementy, které přeruší uživatele z jeho flow. Jsou-li dialogy použity tak, že se netýkají konkrétního úkolu uživatele, je pravděpodobné, že uživatel začne ignorovat nebo odmítat dialogy, aniž by plně porozuměl obsahu.
+- Zobrazujte dialog ve když jej uživatel nebo systém vyžádal, např. kliknutí na tlačítko. Vyvarujte se automaticky generovaných vyskakovacích oken, které rozptylují uživatele při práci,
+    
+
+  
+
+## Kdy nepoužít dialog
+
+-   Nepoužívejte, pokud obsah nesouvisí s aktuálním úkolem/cílem uživatele
+-   Nepoužívejte k zobrazení složitých nebo velkých množství dat.
+-   Nepoužívejte, pokud uživatel dialog nespustil.
+
+-   Snažte se vyvarovat složitých komponent (např: nějaké komplikované tabulky s dalšími interakcemi)
+-   Vyhněte se komponentám, jako jsou odkazy, které uživatele odvezou od aktuálního kontextu a úkolu.
+-   Pokud je to možné, vyhněte se komponentám, které před uživatelem skrývají informace nebo výběr - jako je akordeon a karty - a vyžadují další úsilí od uživatele, aby objevil veškerý dostupný obsah.
+    
+
+  
+
+## Varianty Modálních dialogů
+
+![](https://lh3.googleusercontent.com/DDVDNHaAkL7knk6Y9To4fdeGxawDzPFTbTCm8rPkWhOp4ZPjPRueJ5jXRCXK3dU-eOeedOxQkRCbSXWKCKbA8qi1jlhpTIA0PfoVfGDwzE0zik1vZyInEGjshJ5aZybtl6E37kQB)
+
+  
+  
+
+## Chování dialogu
+
+#### Spuštění 
+- Mezi běžné komponenty, které mohou vyvolat dialog, patří tlačítko, odkaz nebo ikona.
+
+#### Focus po otevření 
+- Po otevření dialogu nastavte počáteční fokus na první input. Focus by měl zůstat na inputu od té doby dokud nezavřeme dialog.
+
+#### Scroll 
+- Komponenta má nastavenou maximální výšku. Pokud je obsah dialogu delší než výška dialogu, měl by se úsek těla svisle posouvat a záhlaví a zápatí by měly zůstat pevné na svém místě.  
+
+#### Zavření dialogu
+
+-   x : Kliknutím na ikonu, Zavřít v pravém horním rohu zavřete dialog a vrátíte uživatele do původní činosti.
+-   Kliknutí mimo : Kliknutím mimo obsah dialogu se automaticky okno zavře.
+-   Esc : Stiskněte ESC na klávesnici 

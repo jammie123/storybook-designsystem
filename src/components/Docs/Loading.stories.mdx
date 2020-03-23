@@ -1,0 +1,34 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="Design System/Guideline/Loading states" /> 
+
+# Loading states
+
+## Anatomie prvku
+
+Dejte užiatelům vědět, že se něco děje, čekání nikoho nebaví a už vůbec, když neví, že se něco děje.
+
+## Typy loading stavů
+
+### Skeleton pages
+
+Stavy skeletu jsou zjednodušené části stránky použié pro počátečnímnačtení stránky, což znamená, že informace na stránce se dosud plně nenačetily. Měly by se objevit pouze na několik sekund a zmizet, jakmile se na stránku objeví obsah a obsah.
+
+  
+
+### Indikátory načítání
+
+Loading indikátory signalizují zpracování uživatelské akce. Na rozdíl od indikátorů průběhu indikátory načítání pouze signalizují, že dochází k načítání, a nedávají žádný náznak pokroku.
+
+## Kdy a jak používat
+
+-   Pokud je použito tlačítko, umístěte spinner do tlačítka a v dissableujte tlačítko
+    
+-   Pokud zobrazuje část stránky, komponenta nový obsah nebo jej aktualizuje umístěte spinner do této části stránky popř komponenty.
+    
+-   Pokud si nejste jisti, kam umístit spinner, umístěte jej tam, kam má být směřována pozornost uživatele po dokončení načítání.
+    
+-   Zobrazujte spinner pouze tehdy, je-li očekávaná doba čekání delší než jedna sekunda.
+
+    

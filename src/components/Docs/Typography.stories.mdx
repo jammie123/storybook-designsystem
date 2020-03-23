@@ -1,0 +1,69 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+
+import { typography } from '../shared/styles';
+
+<Meta title="Design System/Guideline/Typography" /> 
+
+# Typography
+
+**Font:** Trivia Seznam   
+
+**Weights:** regular, bold
+
+
+    
+
+
+
+| Font size:         | Line height      | Název           |
+| ------------------ | ---------------- | --------------- |
+| 11px               | 15               | 01 Caption Small              |
+| 12px               | 15               | 01 Caption              |
+| 13px               | 17.5             | 02 Body Small               |
+| 16px                | 17.5             | 03 Body          |
+| 18px               | 20               | 04 Heading x-small            |
+| 21px                 | 25               | 05 Heading small            |
+| 24px               | 30               | 07 Heading               |
+| 36px               | 40               | 08 Hero              |  
+| 48px               | 50               | 09 Hero large              |
+| 60px               | 60               | 10 Hero x-large               |
+
+
+##  Regular
+
+<Typeset
+  fontSizes={[
+    Number(11),
+    Number(12), 
+    Number(13),
+    Number(16),
+    Number(18),
+    Number(21),
+    Number(24),
+    Number(36),
+    Number(48),
+    Number(60)
+  ]}
+  fontWeight={typography.weight.regular}
+  sampleText="Heading"
+/>
+
+## Bold
+
+<Typeset
+  fontSizes={[
+    Number(11),
+    Number(12), 
+    Number(13),
+    Number(16),
+    Number(18),
+    Number(21),
+    Number(24),
+    Number(36),
+    Number(48),
+    Number(60)
+  ]}
+  fontWeight={typography.weight.bold}
+  sampleText="Heading"
+/>
+

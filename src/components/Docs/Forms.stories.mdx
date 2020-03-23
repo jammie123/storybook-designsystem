@@ -1,0 +1,68 @@
+import { Meta, Typeset } from '@storybook/addon-docs/blocks';
+
+
+<Meta title="Design System/Guideline/Forms" /> 
+
+
+# Jak na formuláře
+
+## Obecné pravidla
+- Eliminovat počet vyplňovaných polí
+- Logické seskupování polí, které k sobě patří popř. pojmenovávání skupin ke zvýšení čitelnosti u delších formulářů
+- Dodržovat přístupnost (ovládání z klávesnice)
+- Ideálně když šířka inputu přibližně odpovídá délce vstupu. (např. 5 znakové PSČ, idálně šířku na 5 znaků)
+- Snažte se eliminovat dropdowny, když je počet možností menší než 4 radši použijte přepínače (radiobutton).
+- Vysvětlení požadavků na pro vstup předem. Pokud vstup vyžaduje specifikcý formát nebo pravidla např. politika hesla, PSČ, telefoní číslo atd. Sdělte je uživatelovi předem.
+- Poskytněte dostatečně viditelné chybové hlášky.
+
+## Tlačítka
+### Typy zarovnání
+
+## Validace formulářů
+### Inline validace na klientu
+
+Doporučený přístup je validovat formulář v reálném čase před odesláním formuláře. Ideální je použít validaci na klientu, k validaci dochází ztrátou focusu z inputu, když zjistíme, že input nespňuje kritéria např: 
+- poviný input
+- není kompletní email
+- krátký heslo
+
+zobrazíme inline error stav inputu. Uživatel by tento stav měl rozpoznat a opravit.
+
+
+### Serverová validace
+Né vždy jde použít inline validace na klientu a je nutné poslat dotaz s formulářem na server. Když uživatel odešle formulář s daty nabízí se použít spinner na čekání odpovědi od serveru a v případě, že server odpoví chybou zobrazit komponentu Status message(chybový stav).
+
+## Disablování prvků ve formuláři
+- U krátkých formulářů, kde jsou nutné vyplnit povinná pole se nabízí použít deaktivování tlačítka pro primární akce. Zamezí se zobrazení chybové hlášky.
+- U delších formulářů nezakazujte tlačítka primární akce, protože chybové zprávy a tlačítko primární akce nemusí být na obrazovce viditelné současně.
+- Pokud zpracování formuláře bude nějakou dobu trvat, sdělte to uživateli pomocí Status message nebo nějakým ukazatelem průběhu (např. Spinner)
+
+## Rozvržení layoutu formuláře (sloupce)
+Ideální rozložení formuláře je jeden sloupec, protože je jeden sloupec se velmi doře skenuje, bohužel při delších formulářích tento přístup zabere více prostoru. V případě že stránka má více volného místa nabízí se využít vícero sloupců (2-3) v určitých situacích jsou vhodné, ale vždy používejte zdravý rozum k seskupení souvisejících polí vodorovně. Dva až tři vstupy na jedné lince nezpůsobí problémy, pokud logicky patří k sobě. Zde jsou nějaké příklady:
+
+- [křestní jméno]  [příjmení]
+- [číslo kreditní karty] [datum vypršení platnosti] [bezpečnostní kód]
+- [stát] [město]  [PSČ]
+
+## Label a placeholder, pravidla
+
+### Vyvarujte se používat label jako placeholder, proč:
+- Když uživatel začne psát, placeholder zmizí a nápovědný text k inputu je zracen, uživatel musí smazat text, aby zjistil o jaké pole jde. U krátkých často vyplnovaných formulářích k problémům, že neznám pole moc nedochází, ale dlouhé formuláře, které uživatel nevyplnuje často.
+- Ve chvíli kdy placeholder zmizí při focusu na input, tak je to velmi nepohodlné při ovládání z klávesnice. Po stisknutí "tabu" nevím, co je to za input.
+
+### Jak používat label, placeholder a helper text
+- Ideálně použít label nad inputem zarovnaný doleva, můžeme použít label zarovnaný vedle inputu. 
+- Placeholder použijte v inputu, jako ukázku co má přijít na vstup (PSČ: 14700, VIN: 5N1AN0NW1AC500442) nepoužívjete jako label, používjete anonymní hodnoty, používejte kde to má smysl.
+
+## Související komponenty
+- Input
+- Dropdown
+- Button
+- Notifikace
+- Spinner
+- Skeleton  
+
+## Zdroje informací
+- https://www.nngroup.com/articles/web-form-design/
+- https://www.nngroup.com/articles/form-design-placeholders/
+- https://www.carbondesignsystem.com/patterns/forms-pattern
