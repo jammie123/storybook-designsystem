@@ -24,6 +24,42 @@ import { Meta, Typeset } from '@storybook/addon-docs/blocks';
     - Ideálně použít label nad inputem zarovnaný doleva, můžeme použít label zarovnaný vedle inputu. 
     - Placeholder použijte v inputu, jako ukázku, co má přijít na vstup (PSČ: 14700, VIN: 5N1AN0NW1AC500442) nepoužívjete jako label, používjete anonymní hodnoty, používejte kde to má smysl.
 
+# Používání selectů
+Select je formulářový prvek, který slouží k výběru z jedné hodnoty z několika. 
+- https://uxmovement.com/forms/stop-misusing-select-menus/
+
+### Kdy použít select ?
+- Při menším počtu možností než 4-5 se doporučuje použít (radiobuton).
+- Při větším počtu možností více než 15 se doporučuje použít normální textfield s možností zadat vlastní vstup uživatele.
+- Používejte labely logicky, vždy popište z čeho uživatelé vybírají
+    - Label = Typ zpětné vazby
+    - Label inside = Vyberte typ zpětné vazby
+- Nepoužívejte generické popisky, např. prosím vyberte
+- Default hodnoty v selectu, dávají smysl pouze a tehdy když víme, že 90% uživatelů by vyplnilo tuto hodnotu. V případě vyplnění defaultní hodnoty se může vzniknout chybovst, protože uživatelé přehlídnou vyplněné pole. 
+
+
+# Umístění tlačítek
+Umístění tlačítke je velké téma, kterým se zabývalo už hodně výzkumů. Zajímavé, že každá platforma OS se chová k umístění tlačítek jinak. Často záleží na kontextu a situaci, ale důvody a jistá doporučení existujou.
+- https://adamsilver.io/articles/where-to-put-buttons-on-forms/
+- https://www.lukew.com/ff/entry.asp?571
+
+### Umístění tlačítek na webových formulářích, jako samostatná stránka. 
+- Primární tlačítko by mělo být nalevo pod formulářem.
+- Tlačítko zpět, nejideálněji umístit nad formulář a dole bude jenom primární tlačítko. 
+    - Existují alternativy umístit tlačítko "zpět" doleva od od primárního tlačítka a nebo dolů pod primární tlačítko.
+    - Volební formulář u vladní služby GOV.UK umístila na formuláři tlačítko zpět nad formulář a dole pod formulářem bylo pouze primární tlačítko.
+- Tlačítka které ovlivňují chování např. celý formulář nebo tabulku umistěte nad formulář. Např. funkce vyber všechny položky.
+- V některých formulářích, kde je jeden vstup umistěte tlačítko vedle vstupu. Jedná se např o hledání nebo vkládání PIN kodu. 
+
+
+### V dialogu akční tlačítko "OK" funguje líp napravo
+http://uxmovement.com/buttons/why-ok-buttons-in-dialog-boxes-work-best-on-the-right
+- S tlačítkem „Ok“ na pravé straně jsou vizuální fixace menší a plynou jedním směrem
+- Primární tlačítko nalevo způsobí, že nejprve uvidí primární akci vlevo a poté se podívají na sekundární akci vpravo. Pak přesunou oči zpět k primární akci, aby na ni klikli. Tím se vytvoří celkem tři vizuální fixace ve více směrech.
+- Když uživatelé kliknou na tlačítka sekundární akce, očekávají, že aplikace neudělá nic a vrátí je zpět na původní obrazovku. Tlačítka „Zrušit“ tedy fungují jako tlačítka „Zpět“.
+- Když uživatelé kliknou na tlačítka primární akce, očekávají, že aplikace provede akci, kterou tlačítko říká, a přesune je na další obrazovku. Tlačítka „Ok“ tedy fungují jako tlačítka „Další“. Umístění tlačítka sekundární akce vlevo a tlačítka primární akce na pravé mapě k funkcím tlačítka „Zpět“ a „Další“, které může uživatel očekávat.
+
+
 
 # Validace formulářů
 ### Inline validace na klientu
