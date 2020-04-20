@@ -15,18 +15,4 @@ module.exports = {
   ],
 };
 
-import '../src/global/global.scss';
-
-const path = require('');
-
-// blah blah code
-
-module.exports = (baseConfig, env) => {
-
-  // blah blah code
-
-  config.resolve.modules = [
-    ...(config.resolve.modules || []),
-    path.resolve('./'),
-  ];
-}
+// import '../src/global/global.scss';

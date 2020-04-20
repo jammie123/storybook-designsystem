@@ -33,4 +33,4 @@ addDecorator(story => (
 loadFontsForStorybook();
 
 
-import '../src/global/global.css'
+// import '../src/global/global.css'
