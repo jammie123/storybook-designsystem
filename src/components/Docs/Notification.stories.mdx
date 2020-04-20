@@ -1,67 +1,69 @@
 import { Meta, Typeset } from '@storybook/addon-docs/blocks';
 
+import { createGlobalStyle } from "styled-components";
+
+
+
 
 <Meta title="2. Guideline/Status message (dodělávky + vývoj)" /> 
 
+<div style={{backgroundColor:"#F5F5F5", padding:3+"rem", marginBottom: 3+"rem"}}>
 
 # Status message
-
-
 Prvky sloužící pro komunikaci mezi systémem a uživatelem. 
 
-## Anatomie prvku
-<img src="https://via.placeholder.com/468x400?text=Ukázka a popis částí" />  
+</div>
 
-## Stavy
 
--   Informativní
--   Success
+
+
+## Stavy hlášek
+<img src="src/img/StatusMessages/OverviewMessages.png " style={{margin: 2 +"rem"}}/>   
+
+-   Success    
 -   Error
 -   Warning
+-   Info
     
 
-  
-## Typy oznámení
+
+## Anatomie prvku
+<img src="src/img/StatusMessages/Anatomie-Notifikace.png " style={{margin: 2 +"rem"}}/>   
+
+1. Nadpis hlášky
+2. Tělo hlášky (Volitelný údaj)
+3. Akční prvky(Volitelný) - Můžou obsahovat tlačítka a odkazy
+4. Zavření hlášky (volitelný)
+
+## Typy hlášek
 
 -   Inline message
 -   Toast
-    
-
-
-
 
 ## Inline message
+Používáme často ve formulářích nebo v místech kde jsou vstupní prvky (inputy atd)
+<img src="src/img/StatusMessages/InlineMessage.png "/> 
 
-Často se používají pro chyby ve formulářích nebo jiných vstupních oblastech.
+#### Kdy a jak používat
 
-  
-
-<img src="https://via.placeholder.com/468x400?text=Ukázka inline stavové " />
-  
-
-### Kdy a jak používat
-
-1.  Ve formulářích mohou být inline messages umístěna nahoře nebo dole záleží na kontextu.
-4.  Šířka boxu se liší v závislosti na kontextu rozvržení stránky.
-    
-
-  
-
-## Toast messages
-
-Zobrazí krátkou informativní zprávu, která se objeví pouze na krátkou dobu.
-
-Toasty jsou dočasná oznámení, takže jsou nejlepší pro krátké a jasné zprávy, nehodí se pro zobrazování složitých chybových zpráv v tom případě použijte inline message, které zůstane na obrazovce a nezmizí po časové prodlevě.
-    
-<img src="https://via.placeholder.com/468x400?text=Ukázka toast hlášky ve stránce" />
+1. Umístění message je většinou nahoře formuláře, ale zálěží na kontextu situace. Nemá pevnou pozici. 
+2. Šířka message je podle velikosti containeru. 
+3. Nemělo by docházet k zobrazování vícero inline message naráz. Těmto případům bychom měli předcházet, abychom nemátli uživatele, když zobrazíme např. 3 typy zpráv. 
 
 
-## Obecné pokyny pro použití
 
--   Zkuste nepoužívat více než jednu výstražnou zprávu najednou. Jsou navrženy tak, aby upoutaly pozornost uživatelů, a pokud používáte více než jednoho najednou, může být matoucí, co je důležité.
-    
--   Pokud potřebujete použít delší zprávu , doporučujeme použít také název . Uživatelé mají tendenci ignorovat delší texty, název by měl obsahovat shrnutí zprávy.
-    
--   Informace uvnitř výstražné zprávy by měly být stručné . Pokud je třeba něco vysvětlit podrobněji, doporučuje se použít akční tlačítko a postupně zobrazovat obsah.
-    
-  
+## Toast
+Toasty jsou dočasná oznámení, takže jsou nejlepší pro krátké a jasné zprávy, nehodí se pro zobrazování složitých chybových zpráv v tom případě použijte inline message, které zůstane na obrazovce a nezmizí po časové prodlevě.    
+
+<img src="src/img/StatusMessages/Toast-typy.png " style={{width:100+"%"}}/>
+
+#### Kdy a jak používat
+
+1. Může obsahovat akční tlačítka v závislosti na kontextu.
+2. Nepoužívat pro složité chybové zprávy.
+3. Text toastu mít co nejstručnější
+4. Zobrazujeme vždy nahoře pod hlavičkou "animací" a překrýváme obsah, který je pod toastem. Toast v případě scrollu je fixní na stejné     pozici. 
+
+### Ukázka animace
+<img src="src/img/StatusMessages/ToastMobileAnimation.gif " style={{width:30+"%"}}/>
+<img src="src/img/StatusMessages/ToastDesktopAnimation.gif " style={{width:70+"%"}}/>
