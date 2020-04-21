@@ -8,8 +8,7 @@ node_modules
 build
 dist
 .rpt2_cache
-storybook-static/*
-!storybook-static/img/
+storybook-static
 .cache
 
 # misc  
