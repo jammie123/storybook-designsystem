@@ -12,7 +12,7 @@ storybook-static/*
 !storybook-static/img/
 .cache
 
-# misc
+# misc  
 .DS_Store
 .env
 .env.local
